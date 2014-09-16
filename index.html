@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>Effecitve Date Calculator</title>
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/humanity/jquery-ui.css" />
@@ -8,21 +9,21 @@
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.min.js"></script>
 </head>
+
 <body>
     <div id="datepicker" style="width: 15%;">
         <fieldset>
-            <legend>Select Type of Plan</legend>            
-            
+            <legend>Select Type of Plan</legend>
+
             <div>
                 <select id="DDplan">
                     <option selected="selected">&nbsp;</option>
                     <option>Small Group</option>
                     <option>Individual</option>
-                </select> 
-            </div>           
-        </fieldset><br>
-        
-        
+                </select>
+            </div>
+        </fieldset>
+        <br>
         <div id="small_group">
             <fieldset>
                 <legend>Choose Group Type</legend>
@@ -31,23 +32,28 @@
                     <option>New Hire</option>
                     <option>Special Enrollment Period</option>
                 </select>
-             </fieldset><br>            
-         <div id="new_hire">
-             <fieldset>
-                <legend>New Hire Info</legend>
-                <label>Date of Hire:</label><input type="text" id="DPin_date" /><br>
-                <label>Probation Length: </label><br>
-                <select id="Probation">
-                    <option value="0">0 Days</option>
-                    <option value="15">15 Days</option>
-                    <option value="30">30 Days</option>
-                    <option value="45">45 Days</option>
-                    <option value="60">60 Days</option>
-                 </select>
-                 <button id="ok">OK</button>
-              </fieldset><br>       
-         </div>            
-         <div id="sep">
+            </fieldset>
+            <br>
+            <div id="new_hire">
+                <fieldset>
+                    <legend>New Hire Info</legend>
+                    <label>Date of Hire:</label>
+                    <input type="text" id="DPin_date" />
+                    <br>
+                    <label>Probation Length:</label>
+                    <br>
+                    <select id="Probation">
+                        <option value="0">0 Days</option>
+                        <option value="15">15 Days</option>
+                        <option value="30">30 Days</option>
+                        <option value="45">45 Days</option>
+                        <option value="60">60 Days</option>
+                    </select>
+                    <button id="ok">OK</button>
+                </fieldset>
+                <br>
+            </div>
+            <div id="sep">
                 <fieldset>
                     <legend>Special Enrollment Type</legend>
                     <select id="DDsep">
@@ -60,31 +66,35 @@
                         <option>Marriage</option>
                     </select>
                 </fieldset>
-            </div>            
+            </div>
             <div id="sepInfo">
                 <fieldset>
                     <legend>Special Enrollment Info</legend>
-                    <label>Date of Event:</label><input type="text" id="DPevent_date" /><br>
+                    <label>Date of Event:</label>
+                    <input type="text" id="DPevent_date" />
+                    <br>
                 </fieldset>
-            </div>           
-            <div id="planSelect"> 
-            <label>Date of Plan Selection: </label><input type="text" id="DPplan_selection" />
-            </div>    
+            </div>
+            <div id="planSelect">
+                <label>Date of Plan Selection:</label>
+                <input type="text" id="DPplan_selection" />
+            </div>
             <br />
             <button id="reset">Reset</button>
-            <button id="calc">Calculate</button><br>
-            <p>Your effective date of coverage: <label id="effectivedate"></label></p> 
-            
-            
-            
+            <button id="calc">Calculate</button>
+            <br>
+            <p>Your effective date of coverage:
+                <label id="effectivedate"></label>
+            </p>
         </div>
-        
+
         <div id="individual">
-            
+
         </div>
     </div>
     <script src="edc2.js"></script>
     <script src="main.js"></script>
-    
+
 </body>
+
 </html>

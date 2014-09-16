@@ -1,4 +1,4 @@
-$(function(){
+$(function() {
     $("#DDplan").on('change', function(e) {
         edc.plan = $(this).val();
         console.log(edc.plan);
@@ -23,50 +23,39 @@ $(function(){
     $("#Probation").on('change', function(e) {
         edc.setProbation(parseInt($(this).val()));
         console.log("Probation = " + edc.probation);
-    })
+    });
     $("#DPin_date").datepicker().on('change', function(e) {
         edc.setInDate($(this).val());
         console.log("Hire date = " + edc.in_date);
     });
-    
     // special enrollment listeners
-    $("#DDsep").on('change', function(e){
+    $("#DDsep").on('change', function(e) {
         edc.setSepType($(this).val());
         $("#sepInfo").css('visibility', 'visible');
-        
     });
-    
-    $("#DPevent_date").datepicker().on('change', function(e){
+    $("#DPevent_date").datepicker().on('change', function(e) {
         edc.setInDate($(this).val());
         $("#planSelect").css('visibility', 'visible');
         console.log("Event Date = " + edc.in_date);
         var range = edc.getDateRange();
         console.log("returned = " + range);
         initSelect(range);
-        
-    })
-    
-    
-    
-    
-    $("#ok").click(function(){
+    });
+    $("#ok").click(function() {
         $("#planSelect").css('visibility', 'visible');
         var range = edc.getDateRange();
         console.log("returned = " + range);
         initSelect(range);
-     
-    })
-    
+    });
     $("#calc").click(function() {
-            var effective = edc.calculate();
-            $("#effectivedate").text(moment(effective).format('MMM DD YYYY'));
+        var effective = edc.calculate();
+        $("#effectivedate").text(moment(effective).format('MMM DD YYYY'));
     });
-    
-    function initSelect(range){
+
+    function initSelect(range) {
         $("#DPplan_selection").datepicker(range).on('change', function(e) {
-        edc.elect_date = $(this).val();
-        console.log("Elected date = " + edc.elect_date);
-         
-    });
+            edc.elect_date = $(this).val();
+            console.log("Elected date = " + edc.elect_date);
+        });
     }
 })

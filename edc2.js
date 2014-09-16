@@ -112,17 +112,18 @@ var edc = {
             console.log("1 = " + effective);
             return effective;
         } else if(moment(this.elect_date).date() > moment(due).date() && moment(this.elect_date).date() < moment(due).add('months', 1)) {
-              var nextMonth = moment(this.elect_date).add('months', 2);
-              var effective = moment(nextMonth).date(1).format('MM DD YYYY');
-              console.log("2 = " + effective);
-              return effective;
-    } else {
-        var nextMonth = moment(this.elect_date).add('months', 3);
-        var effective = moment(nextMonth).date(1).format('MM DD YYYY');
-        console.log("3 = " + effective);
-        return effective;
-    }
-}, "calcSmallGroupSpecial": function() {
+            var nextMonth = moment(this.elect_date).add('months', 2);
+            var effective = moment(nextMonth).date(1).format('MM DD YYYY');
+            console.log("2 = " + effective);
+            return effective;
+        } else {
+            var nextMonth = moment(this.elect_date).add('months', 3);
+            var effective = moment(nextMonth).date(1).format('MM DD YYYY');
+            console.log("3 = " + effective);
+            return effective;
+        }
+    },
+    "calcSmallGroupSpecial": function() {
         //calculate special date
         switch(this.sep_type) {
             case "Loss of MEC":
@@ -142,4 +143,4 @@ var edc = {
                 break;
         }
     },
-    }
+}
