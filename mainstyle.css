@@ -1,0 +1,24 @@
+/*
+    Document   : mainstyle．css
+    Created on : 2014-09-07 06:00 PM
+    Author     : csquared
+    Description:
+    Purpose of the stylesheet follows.
+    To change this template use Tools | Templates.
+*/
+
+#new_hire {
+    visibility: hidden;
+}
+
+#planSelect {
+    visibility: hidden;
+}
+
+#sep {
+    visibility: hidden;
+}
+
+#sepInfo {
+    visibility: hidden;
+}
