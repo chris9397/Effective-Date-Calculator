@@ -4,7 +4,6 @@
 <head>
     <title>Effecitve Date Calculator</title>
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/themes/humanity/jquery-ui.css" />
-    <link rel="stylesheet" href="mainstyle.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.min.js"></script>
@@ -12,17 +11,16 @@
 
 <body>
     <div id="datepicker" style="width: 15%;">
-        <fieldset>
-            <legend>Select Type of Plan</legend>
-
-            <div>
-                <select id="DDplan">
-                    <option selected="selected">&nbsp;</option>
-                    <option>Small Group</option>
-                    <option>Individual</option>
-                </select>
-            </div>
-        </fieldset>
+        <div id="DDplan">
+            <fieldset>
+                <legend>Select Type of Plan</legend>
+                    <select id="selectPlan">
+                        <option selected="selected">&nbsp;</option>
+                        <option>Small Group</option>
+                        <option>Individual</option>
+                    </select>
+            </fieldset>
+        </div>
         <br>
         <div id="small_group">
             <fieldset>
@@ -33,7 +31,7 @@
                     <option>Special Enrollment Period</option>
                 </select>
             </fieldset>
-            <br>
+        </div>
             <div id="new_hire">
                 <fieldset>
                     <legend>New Hire Info</legend>
@@ -49,9 +47,13 @@
                         <option value="45">45 Days</option>
                         <option value="60">60 Days</option>
                     </select>
-                    <button id="ok">OK</button>
                 </fieldset>
-                <br>
+            </div>
+            <div id="planSelect">
+                <fieldset>
+                    <legend>Select Date</legend>
+                    <input type="text" id="plan_selection" />
+                </fieldset>
             </div>
             <div id="sep">
                 <fieldset>
@@ -75,25 +77,21 @@
                     <br>
                 </fieldset>
             </div>
-            <div id="planSelect">
-                <label>Date of Plan Selection:</label>
-                <input type="text" id="DPplan_selection" />
-            </div>
-            <br />
-            <button id="reset">Reset</button>
-            <button id="calc">Calculate</button>
             <br>
-            <p>Your effective date of coverage:
-                <label id="effectivedate"></label>
-            </p>
+            <br>
+            <div id="effective">
+                <p>Your effective date of coverage:
+                    <label id="effectivedate"></label>
+                </p>
+            </div>
         </div>
 
         <div id="individual">
 
         </div>
-    </div>
     <script src="edc2.js"></script>
     <script src="main.js"></script>
+    
 
 </body>
 

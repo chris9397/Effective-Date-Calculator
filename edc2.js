@@ -97,10 +97,12 @@ var edc = {
         if(moment(this.elect_date).date() < moment(due).date()) {
             var nextMonth = moment(this.elect_date).add('months', 1);
             var effective = moment(nextMonth).date(1).format('MM DD YYYY');
+            this.effective = effective;
             return effective;
         } else {
             var nextMonth = moment(this.elect_date).add('months', 2);
             var effective = moment(nextMonth).date(1).format('MM DD YYYY');
+            this.effective = effective;
             return effective;
         }
     },
@@ -109,16 +111,19 @@ var edc = {
         if(moment(this.elect_date).date() < moment(due).date()) {
             var nextMonth = moment(this.elect_date).add('months', 1);
             var effective = moment(nextMonth).date(1).format('MM DD YYYY');
+            this.effective = effective;
             console.log("1 = " + effective);
             return effective;
         } else if(moment(this.elect_date).date() > moment(due).date() && moment(this.elect_date).date() < moment(due).add('months', 1)) {
             var nextMonth = moment(this.elect_date).add('months', 2);
             var effective = moment(nextMonth).date(1).format('MM DD YYYY');
+            this.effective = effective;
             console.log("2 = " + effective);
             return effective;
         } else {
             var nextMonth = moment(this.elect_date).add('months', 3);
             var effective = moment(nextMonth).date(1).format('MM DD YYYY');
+            this.effective = effective;
             console.log("3 = " + effective);
             return effective;
         }
